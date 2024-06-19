@@ -18,6 +18,7 @@ namespace StopWatch
 
             string data = Console.ReadLine().ToLower();
             char type = char.Parse(data.Substring(data.Length-1,1));
+            int time = int.Parse(data.Substring(0,data.Length-1));
         }
         static void Start(int time)
         {
