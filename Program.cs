@@ -17,6 +17,7 @@ namespace StopWatch
             Console.WriteLine("QUANTO TEMPO DESEJA CONTAR?");
 
             string data = Console.ReadLine().ToLower();
+            char type = char.Parse(data.Substring(data.Length-1,1));
         }
         static void Start(int time)
         {
