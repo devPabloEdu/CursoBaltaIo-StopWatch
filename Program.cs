@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Threading;
+
 namespace StopWatch
 {
     class Program
@@ -12,10 +14,12 @@ namespace StopWatch
         {
             int time = 10;
             int currentTime = 0;
-            while( currentTime <= time)
+            while( currentTime != time)
             {
-                Console.WriteLine(currentTime);
+                Console.Clear();
                 currentTime++;
+                Console.WriteLine(currentTime);
+                Thread.Sleep(1000);
             }
         }
     }    
