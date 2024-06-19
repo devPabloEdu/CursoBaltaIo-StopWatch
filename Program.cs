@@ -7,12 +7,17 @@ namespace StopWatch
     {
         static void Main (string[] args)
         {
-            Start();
+            Start(6);
         }
-
-        static void Start()
+        static void Menu(){
+            Console.Clear();
+            Console.WriteLine("S = SEGUNDOS");
+            Console.WriteLine("M = MINUTOS");
+            Console.WriteLine("0 = SAIR DO MENU");
+            Console.WriteLine("QUANTO TEMPO DESEJA CONTAR?");
+        }
+        static void Start(int time)
         {
-            int time = 10;
             int currentTime = 0;
             while( currentTime != time)
             {
@@ -21,6 +26,10 @@ namespace StopWatch
                 Console.WriteLine(currentTime);
                 Thread.Sleep(1000);
             }
+            
+            Console.Clear();
+            Console.WriteLine("StopWatch finalizado!! retornando para o MENU");
+            Thread.Sleep(1000);
         }
     }    
 }
